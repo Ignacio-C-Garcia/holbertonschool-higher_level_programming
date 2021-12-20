@@ -4,7 +4,7 @@ int check_cycle(listint_t *list)
 	listint_t *A2 = list;
 	listint_t *A1 = list;
 
-	while (1)
+	while (list)
 	{
 		if (A1->next)
 			A1 = A1->next;
