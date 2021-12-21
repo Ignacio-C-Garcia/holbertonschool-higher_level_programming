@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import random, math
+import random
+import math
 number = random.randint(-10000, 10000)
 last_digit = int(math.fmod(number, 10))
 print('Last digit of', str(number), 'is', str(last_digit), end=' ')
