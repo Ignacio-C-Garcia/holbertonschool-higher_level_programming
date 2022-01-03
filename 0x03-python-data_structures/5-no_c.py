@@ -5,4 +5,3 @@ def no_c(my_string):
         if letter != 'c' and letter != 'C':
             copy_str = copy_str + letter
     return copy_str
-    
