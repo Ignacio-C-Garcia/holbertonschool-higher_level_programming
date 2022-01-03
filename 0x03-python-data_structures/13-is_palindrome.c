@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	int counter = 0;
 	int i = 0;
 
-	if (aux)
+	if (aux && aux->next != NULL)
 	{
 		while (aux)
 		{
@@ -21,9 +21,11 @@ int is_palindrome(listint_t **head)
 			aux = aux->next;
 		}
 
-		for (i = 0; i <= counter - 1; i++)
+		counter--;
+
+		for (i = 0; i < counter; i++)
 		{
-			if (buffer[i] != buffer[counter - 1])
+			if (buffer[i] != buffer[counter])
 				return (0);
 			counter--;
 		}
