@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stddef.h>
+#include <stdlib.h>
 /**
 * is_palindrome - checks if a singly linked list is a palindrome.
 * @head: header of a linked list
@@ -7,7 +8,7 @@
 */
 int is_palindrome(listint_t **head)
 {
-	int buffer[1024];
+	int *buffer = NULL;
 	listint_t *aux = *head;
 	int counter = 0;
 	int i = 0;
@@ -16,19 +17,32 @@ int is_palindrome(listint_t **head)
 	{
 		while (aux)
 		{
-			buffer[counter] = aux->n;
 			counter++;
 			aux = aux->next;
 		}
 
+		buffer = malloc(counter * sizeof(int));
+			if (!buffer)
+				return (0);
+		counter = 0;
+		aux = *head;
+		while (aux)
+                {
+			buffer[counter] = aux->n;
+                        counter++;
+                        aux = aux->next;
+                }
 		counter--;
 
 		for (i = 0; i < counter; i++)
 		{
 			if (buffer[i] != buffer[counter])
+			{	free(buffer);
 				return (0);
+			}
 			counter--;
 		}
+		free(buffer);
 	}
 	return (1);
 }
