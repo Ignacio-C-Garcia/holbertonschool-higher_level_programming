@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 		aux = aux->next;
 	}
 
-	for(i = 0; i < counter - 1; i++)
+	for(i = 0; i <= counter - 1; i++)
 	{
 		if(buffer[i] != buffer[counter - 1])
 			return (0);
