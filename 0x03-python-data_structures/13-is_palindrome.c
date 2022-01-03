@@ -22,15 +22,11 @@ int is_palindrome(listint_t **head)
 		}
 
 		buffer = malloc(counter * sizeof(int));
-			if (!buffer)
-				return (0);
-		counter = 0;
-		aux = *head;
-		while (aux)
+		while (*head)
                 {
-			buffer[counter] = aux->n;
-                        counter++;
-                        aux = aux->next;
+			buffer[i] = aux->n;
+                        i++;
+                        *head = (*head)->next;
                 }
 		counter--;
 
