@@ -16,3 +16,4 @@ def list_division(my_list_1, my_list_2, list_length):
         list_results.append(0)
     finally:
         return list_results
+    return list_results
