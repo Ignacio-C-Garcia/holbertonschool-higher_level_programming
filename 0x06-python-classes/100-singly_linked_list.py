@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """linked list"""
+
+
 class Node:
     """class node atributos data y nextnode"""
     def __init__(self, data, next_node=None):
@@ -9,7 +11,11 @@ class Node:
     @property
     def data(self):
         return(self.__data)
+
+
 """class linked list"""
+
+
 class SinglyLinkedList:
     """atributo head of the linked list"""
     def __init__(self):

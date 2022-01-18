@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" modulo con square en esteroides"""
+
 
 class Square:
-
+    """ atributo size int mayor o igual a 0"""
     def __init__(self, size=0, position=(0, 0)):
         if type(size) != int:
             raise TypeError('size must be an integer')

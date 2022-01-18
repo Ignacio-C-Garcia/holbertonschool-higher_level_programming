@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """modulo con clase square"""
+
+
 class Square:
     """atributo size int mayor o igual a 0"""
     def __init__(self, size=0):
