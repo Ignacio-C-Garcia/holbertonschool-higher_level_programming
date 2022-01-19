@@ -10,9 +10,19 @@ class Node:
     """getter data"""
     @property
     def data(self):
-        return(self.__data)
+        return self.__data
 
+    @data.setter
+    def data(self, value):
+        self.__data = value
 
+    @property
+    def next_node(self):
+        return self.__next_node
+
+    @next_node.setter
+    def next_node(self, value):
+        self.__next_node = value
 """class linked list"""
 
 
@@ -28,13 +38,33 @@ class SinglyLinkedList:
         itr = self.__head
         llstr = ''
         while itr:
-            llstr += str(itr.__data) + '-->'
-            itr = itr.__next_node
-            print(llstr)
+            llstr += str(itr.data)
+            if itr.next_node:
+                llstr+= '\n'
+            itr = itr.next_node
         return llstr
     """insertar nodos la funcion"""
     def sorted_insert(self, value):
-        print("entered sorted", end='')
-        node = Node(value, self.__head)
-        print(node.data)
-        self.__head = node
+        node = Node(value, None)
+        if self.__head == None:
+            self.__head = node
+        else:
+            tmp = self.__head
+            while(self.__head.next_node and self.__head.data > value):
+                self.__head = self.__head.next_node
+            self.__head.next_node = node
+            self.__head = tmp
+
+sll = SinglyLinkedList()
+sll.sorted_insert(2)
+sll.sorted_insert(5)
+sll.sorted_insert(3)
+sll.sorted_insert(10)
+sll.sorted_insert(1)
+sll.sorted_insert(-4)
+sll.sorted_insert(-3)
+sll.sorted_insert(4)
+sll.sorted_insert(5)
+sll.sorted_insert(12)
+sll.sorted_insert(3)
+print(sll)
