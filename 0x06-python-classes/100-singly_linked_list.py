@@ -48,12 +48,14 @@ class SinglyLinkedList:
         node = Node(value, None)
         if self.__head == None:
             self.__head = node
+        else
         else:
             tmp = self.__head
-            while(self.__head.next_node and self.__head.data > value):
-                self.__head = self.__head.next_node
-            self.__head.next_node = node
-            self.__head = tmp
+            aux_prev = tmp
+            aux_next = tmp
+            while(tmp.next_node and tmp.data > value):
+                tmp = tmp.next_node
+            tmp.next_node = node
 
 sll = SinglyLinkedList()
 sll.sorted_insert(2)
