@@ -12,13 +12,13 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        if self.width < 0 or self.height < 0:
+        if self.width == 0 or self.height == 0:
             return 0
         return (self.width + self.height) * 2
 
     def __str__(self):
         lstr = ''
-        if self.height < 0 or self.width < 0:
+        if self.height == 0 or self.width == 0:
             return lstr
         for y in range(self.height):
             for x in range(self.width):
@@ -39,7 +39,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) != int:
-            raise ValueError('width must be an integer')
+            raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
@@ -47,7 +47,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) != int:
-            raise ValueError('height must be an integer')
+            raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
