@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""modulo"""
+
+
 def matrix_divided(matrix, div):
+    """divide all numbers of a matrix"""
     if type(matrix) != list:
         raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for element in matrix:
