@@ -2,6 +2,7 @@
 >>> add_integer(1, 2)
 3
 >>> add_integer(0)
+<<<<<<< HEAD
 98
 >>> add_integer(-10, 10)
 0
@@ -38,3 +39,6 @@ Traceback (most recent call last):
 	...
 TypeError: a must be an integer
 
+=======
+98
+>>>>>>> c56f65f8a8ee3bc30d117fafe1a099ab8d30e2a6

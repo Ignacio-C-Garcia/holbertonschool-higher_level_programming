@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Rectangle:
+"""module with a clas rectangle"""
 
+
+class Rectangle:
+    """class rectangle"""
     number_of_instances = 0
     print_symbol = "#"
 
@@ -8,10 +11,11 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-
+    """a function that returns area of the rectangle"""
     def area(self):
         return self.width * self.height
 
+    """a funtion that returns perimeter"""
     def perimeter(self):
         if self.width < 0 or self.height < 0:
             return 0
@@ -44,10 +48,12 @@ class Rectangle:
         if rect_1.area() < rect_2.area():
             return rect_2
         return rect_1
+
     @property
     def width(self):
-        
+
         return self.__width
+
     @property
     def height(self):
         return self.__height

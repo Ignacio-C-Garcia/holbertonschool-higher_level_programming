@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Rectangle:
+"""module with a clas rectangle"""
 
+
+class Rectangle:
+    """class rectangle"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -9,14 +12,14 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        if self.width < 0 or self.height < 0:
+        if self.width == 0 or self.height == 0:
             return 0
         return (self.width + self.height) * 2
 
     @property
     def width(self):
-        
         return self.__width
+
     @property
     def height(self):
         return self.__height

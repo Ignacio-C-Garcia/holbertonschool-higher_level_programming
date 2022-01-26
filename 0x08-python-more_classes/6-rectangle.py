@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Rectangle:
+"""module with a clas rectangle"""
 
+
+class Rectangle:
+    """class rectangle"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -36,8 +39,9 @@ class Rectangle:
 
     @property
     def width(self):
-        
+
         return self.__width
+
     @property
     def height(self):
         return self.__height

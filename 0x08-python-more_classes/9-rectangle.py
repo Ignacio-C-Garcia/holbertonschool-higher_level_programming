@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Rectangle:
+"""module with a clas rectangle"""
 
+
+class Rectangle:
+    """class rectangle"""
     number_of_instances = 0
     print_symbol = "#"
 
@@ -9,17 +12,18 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    """a function that returns area of the rectangle"""
     def area(self):
         return self.width * self.height
-
+    """a funtion that returns perimeter"""
     def perimeter(self):
-        if self.width < 0 or self.height < 0:
+        if self.width == 0 or self.height == 0:
             return 0
         return (self.width + self.height) * 2
 
     def __str__(self):
         lstr = ''
-        if self.height < 0 or self.width < 0:
+        if self.height == 0 or self.width == 0:
             return lstr
         for y in range(self.height):
             for x in range(self.width):
@@ -48,10 +52,11 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         return cls(size, size)
+
     @property
     def width(self):
-        
         return self.__width
+
     @property
     def height(self):
         return self.__height
@@ -59,7 +64,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) != int:
-            raise ValueError('width must be an integer')
+            raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
@@ -67,7 +72,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) != int:
-            raise ValueError('height must be an integer')
+            raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
