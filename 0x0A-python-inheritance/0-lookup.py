@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """adentro"""
     return dir(obj)
