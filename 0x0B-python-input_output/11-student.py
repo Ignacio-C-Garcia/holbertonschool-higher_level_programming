@@ -27,4 +27,3 @@ class Student:
         for item in self.__dict__:
             if item in json:
                 self.__dict__[item] = json[item]
-
