@@ -24,6 +24,7 @@ class Student:
 
     def reload_from_json(self, json):
         """comment"""
-        aux = self.to_json(json.keys())
-        for item in aux:
-            self.__dict__[item] = json[item]
+        for item in self.__dict__:
+            if item in json:
+                self.__dict__[item] = json[item]
+
