@@ -5,10 +5,17 @@ Using ``function``
 -------------------
 
 >>> MyList = __import__('1-my_list').MyList
-
->>> x = MyList()
->>> x.append(1)
->>> x.append(4)
->>> x.append(2)
->>> x.append(3)
->>
+>>> my_list = MyList([1, 4, 3, 2])
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+>>> my_list = MyList([0, -2, -1])
+>>> my_list.print_sorted()
+[-2, -1, 0]
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+>>> my_list = MyList([1, '2', 3])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: must be a list of integers
