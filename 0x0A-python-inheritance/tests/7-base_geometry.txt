@@ -9,9 +9,9 @@ Using ``function``
 >>> testing = BaseGeometry()
 
 >>> testing.integer_validator("my_int", 12)
-
+    
 >>> testing.integer_validator(True, 12)
-
+    
 >>> testing.integer_validator("my_int", True)
 Traceback (most recent call last):
     ...
