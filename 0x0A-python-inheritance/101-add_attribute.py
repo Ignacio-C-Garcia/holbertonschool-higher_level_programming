@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""module"""
+"""module doc"""
 
 
-def add_attribute(obj, name, value):
-    """adentro"""
-    if obj.__dict__ == 0:
+def add_attribute(obj, key, value):
+    """add_attribute doc"""
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
-    setattr(obj, name, value)
+    setattr(obj, key, value)
