@@ -17,17 +17,6 @@ class Square(Rectangle):
         lstr += f"({self.id}) {self.x}/{self.y} - {self.width}"
         return lstr
 
-    @property
-    def size(self):
-        """getter"""
-        return self.width
-
-    @size.setter
-    def size(self, value):
-        """setter"""
-        self.width = value
-        self.height = value
-
     def update(self, *args, **kwargs):
         """update"""
         if args and len(args) > 0:
@@ -50,3 +39,23 @@ class Square(Rectangle):
                 except Exception as f:
                     print(f)
                 setattr(self, attr, kwargs[attr])
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        rdic = {}
+        rdic.setdefault("id", self.id)
+        rdic.setdefault("size", self.width)
+        rdic.setdefault("x", self.x)
+        rdic.setdefault("y", self.y)
+        return rdic
+
+    @property
+    def size(self):
+        """getter"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """setter"""
+        self.width = value
+        self.height = value
