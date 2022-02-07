@@ -34,6 +34,3 @@ class Base:
             for object in list_objs:
                 aux.append(cls.to_dictionary(object))
             file.write(cls.to_json_string(aux))
-
-        
-        
