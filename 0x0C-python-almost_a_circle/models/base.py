@@ -34,3 +34,10 @@ class Base:
             for object in list_objs:
                 aux.append(cls.to_dictionary(object))
             file.write(cls.to_json_string(aux))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """comment"""
+        if json_string is None:
+            return []
+        return json.loads(json_string)
