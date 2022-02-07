@@ -45,6 +45,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """comment"""
-        aux = cls(1, 1)
+        if cls.__name__ == 'Rectangle':
+            aux = cls(1, 1)
+            aux.update(**dictionary)
+            return aux
+        aux = cls(1)
         aux.update(**dictionary)
         return aux
