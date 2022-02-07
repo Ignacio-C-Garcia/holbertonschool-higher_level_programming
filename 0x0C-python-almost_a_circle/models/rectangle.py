@@ -39,13 +39,12 @@ class Rectangle(Base):
         """update"""
         if args and len(args) > 0:
             try:
-                self.id = args.pop(0)
-                self.width = args.pop(0)
-                self.height = args.pop(0)
-                self.x = args.pop(0)
-                self.y = args.pop(0)
-            except Exception as f:
-                print(f)
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except Exception:
                 return
         else:
             for attr in kwargs:
