@@ -46,5 +46,5 @@ class Base:
     def create(cls, **dictionary):
         """comment"""
         aux = cls(1, 1)
-        aux.update(dictionary)
+        aux.update(None, dictionary)
         return aux
