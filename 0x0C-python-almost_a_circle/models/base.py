@@ -52,3 +52,16 @@ class Base:
         aux = cls(1)
         aux.update(**dictionary)
         return aux
+
+    @classmethod
+    def load_from_file(cls):
+        """comment"""
+        aux = []
+        try:
+            with open(f'{cls.__name__}.json') as file:
+                for line in file:
+                    for item in cls.from_json_string(line):
+                        aux.append(cls.create(**item))
+                return aux
+        except Exception:
+            return []
