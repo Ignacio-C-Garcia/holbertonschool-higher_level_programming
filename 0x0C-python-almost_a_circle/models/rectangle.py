@@ -51,8 +51,18 @@ class Rectangle(Base):
                 try:
                     getattr(self, attr)
                 except Exception as f:
-                    print(f)
+                    return
                 setattr(self, attr, kwargs[attr])
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        rdic = {}
+        rdic.setdefault("id", self.id)
+        rdic.setdefault("width", self.width)
+        rdic.setdefault("height", self.height)
+        rdic.setdefault("x", self.x)
+        rdic.setdefault("y", self.y)
+        return rdic
 
     @property
     def width(self):
