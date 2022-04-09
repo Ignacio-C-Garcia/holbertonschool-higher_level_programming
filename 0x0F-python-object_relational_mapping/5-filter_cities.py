@@ -6,10 +6,6 @@ import MySQLdb
 from sys import argv
 
 
-if __name__ == "__main__":
-    connection(argv[1], arigv[2], argv[3], argv[4])
-
-
 def connection(user, psswd, datab, state):
     """function mysqldb"""
     try:
@@ -33,3 +29,7 @@ def connection(user, psswd, datab, state):
         print(item[0], end="")
         separator = ", "
     print("")
+
+
+if __name__ == "__main__":
+    connection(argv[1], arigv[2], argv[3], argv[4])
