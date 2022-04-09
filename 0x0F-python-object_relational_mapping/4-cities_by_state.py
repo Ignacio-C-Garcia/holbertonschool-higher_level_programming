@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""a script that lists all cities from the database hbtn_0e_4_usa"""
 import MySQLdb
 from sys import argv
+
+
 def connection(user, psswd, datab):
     try:
         db_connection = MySQLdb.connect(host="localhost",
@@ -13,9 +16,12 @@ def connection(user, psswd, datab):
         raise fail
         return
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM cities JOIN states ON cities.state_id = states.id")
+    cursor.execute("SELECT * FROM cities\
+            JOIN states ON cities.state_id = states.id")
     m = cursor.fetchone()
     while(m):
-        print((m[0],m[2],m[4]))
+        print((m[0], m[2], m[4]))
         m = cursor.fetchone()
+
+
 connection(argv[1], argv[2], argv[3])
