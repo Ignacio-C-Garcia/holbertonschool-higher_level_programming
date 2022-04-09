@@ -4,6 +4,10 @@ import MySQLdb
 from sys import argv
 
 
+if __name__ == "__main__":
+    connection(argv[1], argv[2], argv[3])
+
+
 def connection(user, psswd, datab):
     try:
         db_connection = MySQLdb.connect(host="localhost",
@@ -22,6 +26,3 @@ def connection(user, psswd, datab):
     while(m):
         print((m[0], m[2], m[4]))
         m = cursor.fetchone()
-
-
-connection(argv[1], argv[2], argv[3])

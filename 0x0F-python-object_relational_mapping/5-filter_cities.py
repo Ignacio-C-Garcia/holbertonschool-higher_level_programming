@@ -1,7 +1,13 @@
 #!/usr/bin/python3
-""" a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa"""
+""" a script that takes in the name of a state as an argument
+and lists all cities of that state, using
+the database hbtn_0e_4_usa"""
 import MySQLdb
 from sys import argv
+
+
+if __name__ == "__main__":
+    connection(argv[1], arigv[2], argv[3], argv[4])
 
 
 def connection(user, psswd, datab, state):
@@ -27,6 +33,3 @@ def connection(user, psswd, datab, state):
         print(item[0], end="")
         separator = ", "
     print("")
-
-
-connection(argv[1], argv[2], argv[3], argv[4])
