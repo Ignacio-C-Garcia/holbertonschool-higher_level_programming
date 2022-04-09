@@ -19,5 +19,3 @@ mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
     if len(statesList) != 0:
         for state in statesList:
             print(f'{state.id}: {state.name}')
-    else:
-        print("Nothing")
