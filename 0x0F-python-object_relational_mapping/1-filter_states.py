@@ -15,6 +15,8 @@ if __name__ == "__main__":
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     m = cursor.fetchone()
+    if (m == None):
+        print("")
     while(m):
         print(m)
         m = cursor.fetchone()
