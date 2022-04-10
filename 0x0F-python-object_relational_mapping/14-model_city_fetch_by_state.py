@@ -16,6 +16,9 @@ mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
                                            sys.argv[3]), pool_pre_ping=True)
     session = sessionmaker(engine)()
 
-    lista = session.query(State, City).join(City, State.id==City.state_id).order_by(asc(City.id)).all()
+    lista = session.query(
+            State, City).join(
+                    City, State.id == City.state_id).order_by(
+                            asc(City.id)).all()
     for state, city in lista:
         print(f'{state.name}: ({city.id}) {city.name}')
