@@ -1,0 +1,7 @@
+HTTP/1.0 302 FOUND
+Content-Type: text/html; charset=utf-8
+Content-Length: 223
+Location: http://0.0.0.0:5000/route_2
+Server: Werkzeug/0.16.1 Python/3.4.3
+Date: Fri, 22 Apr 2022 19:14:05 GMT
+
