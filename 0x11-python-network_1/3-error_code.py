@@ -5,6 +5,7 @@ from urllib import parse
 from sys import argv
 from urllib import error
 
+
 if __name__ == "__main__":
 	try:
 		with request.urlopen(argv[1]) as response:
@@ -12,3 +13,4 @@ if __name__ == "__main__":
         		print(body)
 	except error.HTTPError as Fail:
 		print('Error code:', Fail.code)
+
