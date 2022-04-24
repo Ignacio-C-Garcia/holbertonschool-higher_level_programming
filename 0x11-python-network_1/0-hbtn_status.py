@@ -6,4 +6,3 @@ with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
     print(type(body))
     print(body)
     print(body.decode(encoding='UTF-8'))
-
