@@ -13,4 +13,3 @@ if __name__ == "__main__":
             print(body)
     except error.HTTPError as Fail:
         print('Error code:', Fail.code)
-
