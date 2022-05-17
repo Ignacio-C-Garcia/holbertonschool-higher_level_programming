@@ -9,5 +9,5 @@ axios.get('https://swapi-api.hbtn.io/api/films/'.concat(argv[2]))
     console.log(response.data.title);
   }).catch(function (error) {
     // handle error
-	console.log()
+    console.log(error);
   });
