@@ -1,6 +1,10 @@
 #!/usr/bin/node
 const argv = require('process').argv;
-const Request = require('request');
-const request = new Request(argv[2], function (error, response, body) {
-console.log('code: ', response.statusCode)
-})
+const axios = require('axios').default;
+
+// Make a request for a user with a given ID
+axios.get(argv[2])
+  .then(function (response) {
+    // handle success
+    console.log('code:', response.status);
+  })
