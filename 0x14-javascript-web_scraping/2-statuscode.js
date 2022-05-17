@@ -10,4 +10,4 @@ axios.get(argv[2])
   }).catch(function (error) {
     // handle error
     console.log('code:', error.response.status);
-  })
+  });
