@@ -14,6 +14,5 @@ axios.get(argv[2])
     console.log(counter);
   }).catch(function (error) {
     // handle error
-    error = '0';
     console.log(error);
   });
