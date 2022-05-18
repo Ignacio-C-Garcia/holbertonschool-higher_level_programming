@@ -7,16 +7,14 @@ const person = '/18/';
 axios.get(argv[2])
   .then(function (response) {
     for (const film in response.data.results) {
-	for (const line in response.data.results[film].characters)
-	{
-      		if (response.data.results[film].characters[line].includes(person)) {
-        	counter = counter + 1;
-	      	}
-	}
+      for (const line in response.data.results[film].characters) {
+        if (response.data.results[film].characters[line].includes(person)) {
+          counter = counter + 1;
+        }
+      }
     }
     console.log(counter);
   }).catch(function (error) {
     // handle error
     console.log(error);
   });
-
